@@ -1,0 +1,223 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Black Ops One', cursive;
+}
+html, body {
+  background-color: black;
+
+}
+/* Banner */
+.banner img{
+  width: 100%;
+}
+/* Menu */
+.header{
+  width: 100%;
+  position: relative ;
+  justify-content: center;
+}
+ul{
+list-style: none;
+justify-content: center;
+justify-content: space-around;
+display: flex;
+}
+ul li{
+line-height: 0;
+
+}
+ul li a{
+text-decoration: none;
+font-family: 'Black Ops One', cursive;
+font-size: 35px;
+color:#fff;
+font-weight: 1000;
+transition: 1s;
+margin-left: 20px;
+}ul li a:hover{
+color: #EE2D24;
+letter-spacing: 3px;
+}
+
+@media(max-width: 1100px){
+  ul li a{
+    font-size: 30px;
+    margin-left: 25px;
+  }
+}
+/*Grid*/
+.grid-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 345px);
+  grid-auto-rows: minmax(400px, auto);
+  grid-column-gap: 15px;
+  grid-row-gap: 130px;
+  margin: 170px 10px 100px 10px;
+  transition: 0.5s;
+  padding: 10px 0 0 10px;
+  width: 99%;
+  align-items: center;
+  justify-content: center;
+}.grid-item {
+  position: relative;
+  font-size: 25px;
+  background-color: #EE2D24;
+  border: 3px solid white;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}.grid-item:hover{
+  transform:scale(1.03);
+}
+@media(max-width: 900px){
+  .grid-container {
+    grid-template-columns: repeat(4, 300px);
+    grid-auto-rows: minmax(320px, auto);
+    grid-gap: 4px;
+    margin-left: 200px;
+  }
+  .grid-item{
+    font-size: 18px;
+  }
+}
+.grid-I-1{
+  grid-column: 1/5;
+  grid-row: 1/3;
+}.grid-I-2{
+  grid-column: 1/5;
+  grid-row: 3/5;
+}.grid-I-3{
+  grid-column: 1/5;
+  grid-row: 5/7;
+}.grid-I-4{
+  grid-column: 1/5;
+  grid-row: 7/9;
+}.grid-I-5{
+  grid-column: 1/5;
+  grid-row: 9/11;
+}
+/* Grid in Grid*/
+.grid-inside-grid{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-auto-rows: minmax(270px, auto);
+  grid-gap: 10px;
+  width: 99%;
+  justify-content: center;
+}.gig-item {
+  position: relative;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media(max-width: 900px){
+  .grid-inside-grid{
+    grid-template-columns: repeat(3, 480px);
+    grid-auto-rows: minmax(300px, auto);
+    grid-gap: 2px;
+  }
+  .gig-item{
+    font-size: 18px;
+  }
+}
+.gig-i-1{
+  grid-column: 1;
+  grid-row: 1/2;
+}
+.gig-i-2{
+  grid-column: 1;
+  grid-row: 2/3;
+}
+.gig-i-3{
+  grid-column: 1;
+  grid-row: 3/4;
+}
+.gig-i-4{
+  grid-column: 2;
+  grid-row: 1/2;
+}
+.gig-i-5{
+  grid-column: 2;
+  grid-row: 2/3;
+}
+.gig-i-6{
+  grid-column: 2;
+  grid-row: 3/4;
+}
+.gig-i-7{
+  grid-column: 3;
+  grid-row: 1/2;
+}
+.gig-i-8{
+  grid-column: 3;
+  grid-row: 2/3;
+}
+.gig-i-9{
+  grid-column: 3;
+  grid-row: 3/4;
+}
+
+
+/* Card */
+.card-container{
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.card-inner{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.card{
+  width: 450px;
+  perspective: 1000px;
+  cursor: pointer;
+  margin:10px 0;
+}.card:hover .card-inner{
+  transform: rotateY(-180deg);
+}
+.front-face{
+  backface-visibility: hidden;
+}.front-face img{
+  width: 100%;
+  border-radius: 10px;
+}
+.back-face{
+  backface-visibility: hidden;
+  background: #EE2D24;
+  color: #fff;
+  position: absolute;
+  height: 100%;
+  width:100%;
+  top:0 ;
+  left: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transform: rotateY(-180deg);
+}
+/* H2 */
+.grid-container .grid-item h3{
+  font-size: 50px;
+  color: #fff;
+  position: absolute;
+  top: -70;
+  left: 0;
+  right: 0;
+  text-align: center;
+}

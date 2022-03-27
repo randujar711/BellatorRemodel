@@ -1,0 +1,118 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Black Ops One', cursive;
+}
+
+html, body {
+  background-color: black;
+}
+
+/*Banner*/
+.banner img{
+  width: 100%;
+}
+
+/*Menu*/
+.header{
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+ul{
+  list-style: none;
+  justify-content: center;
+  justify-content: space-around;
+  display: flex;
+}
+ul li{
+  line-height: 0;
+}
+ul li a{
+  text-decoration: none;
+  font-family: 'Black Ops One', cursive;
+  font-size: 35px;
+  color:white;
+  font-weight: 1000;
+  transition: 1s;
+  margin-left: 20px;
+}ul li a:hover{
+  color: #EE2D24;
+  letter-spacing: 3px;
+}
+@media(max-width: 1100px){
+  ul li a{
+    font-size: 30px;
+    margin-left: 25px;
+  }
+}
+/*Card*/
+.card-container{
+  width: 100%;
+  height: auto;
+  background: black;
+  color: #fff;
+  margin-top: 50px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}@media(max-width: 1100px){
+    .card-container{
+      margin-left: 50px;
+    }
+}
+.card-inner{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.card{
+  width: 500px;
+  perspective: 1000px;
+  cursor: pointer;
+  margin:30px 0;
+}.card:hover .card-inner{
+  transform: rotateY(-180deg);
+}
+.front-face{
+  backface-visibility: hidden;
+}.front-face img{
+  width: 100%;
+  border-radius: 10px;
+}
+.back-face{
+  backface-visibility: hidden;
+  background: #EE2D24;
+  color: white;
+  position: absolute;
+  height: 100%;
+  width:100%;
+  top:0 ;
+  left: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transform: rotateY(-180deg);
+}
+.p-event h2{
+  font-size: 45px
+}
+/* Sponsor Logos */
+.sponsor img{
+  z-index: 100;
+  position: fixed;
+  width:200px;
+  top: 70%;
+  left: 1%;
+}
+.sponsor img:nth-child(2){
+  left: 83%;
+  width: 180px;
+}
